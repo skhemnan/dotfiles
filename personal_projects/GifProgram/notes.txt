@@ -1,0 +1,36 @@
+## What we're trying to make(bash function ()):
+- downloading a video on youtube-dl
+- using ffmpeg to cut the video according to start time and duration (-ss and -t)
+- using gifgen or other gif conversion to convert the output video from ffmepg into a gif
+/* 
+Alternatively
+- using ffmpeg to cut the video according to -ss and -t AND converting it into a gif
+*/
+##################################################### NEW ADDITION!
+
+gifify, gets rid of ffmeg for us (maybe) and allows us to convert the downloaded video file or part of it into a gif. Quality isn't amazing so probably using gifgen to re-encode it would be awesome
+
+#####################################################
+- providing the ability to add captions on the gif (Just one caption on top of the gif, nothing fancy)
+^ can be used with convert or any other program that allows you to add text to an image file.
+- deleting both the downloaded and cut videos (simple rm *.mp4 could work, but with care)
+## What we've achieved:
+- downloading the video using youtube-dl:
+youtube-dl -f mp4 [youtube-url]
+- cutting the downloaded video and outputting it in the same format:
+ffmpeg -ss [start-time] -i [downloaded video] -t [duration] -c copy [gifname].mp4
+
+## Next to achieve:
+- Converting the outputted ffmpeg into a gif
+- how to put them in one function (parameters, possibly just $1 $2, read up on that)
+
+
+## Notes:
+- It looks like this will have to be a bash script :/
+- aliasing gifmaker to ./gifmaker.sh wouldn't be very elegant but let us see
+- writing it in a script will give me more flexibility, and would make github stuff better
+- assigning a variable seems to be the same as Python:
+variable = $1 or specific file
+example implication: get-url = youtube-dl -f mp4 $1
+
+-http://superuser.com/questions/556029/how-do-i-convert-a-video-to-gif-using-ffmpeg-with-reasonable-quality

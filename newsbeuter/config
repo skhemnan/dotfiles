@@ -1,0 +1,12 @@
+auto-reload yes
+reload-time 60
+bind-key j down feedlist
+bind-key k up feedlist
+bind-key j next articlelist
+bind-key k prev articlelist
+unbind-key q
+unbind-key ENTER
+bind-key h quit
+bind-key l open
+macro m set browser "mpv --ontop --on-all-workspaces --autofit=307x173 --ytdl-format='bestvideo[width<=1920][height<=1080]+bestaudio' --no-border  %u"; open-in-browser
+macro a set browser "mpv --no-video"; open-in-browser

@@ -1,0 +1,16 @@
+
+## Soundcloud Search/Indexer - possibly built in python
+=====================================================
+ - Using Soundcloud API, conduct a search, by building a search URL
+ - Soundcloud API returns the json file, retrieve song name, artist, duration
+ - print the results with index numbers before them
+ - use index numbers similar to mpsyt and commands like download to hookup with 
+   scdl (dependency) to download the song in the url
+
+## Possible Inspiration to draw from
+ * mpsyt
+  - for indexing and printing json results (try looking at code, youtube json is 
+    similar to python
+ * ICS 32 API program
+  - for how the functions are handled/setup, use similar functions for building
+    search URL, retrieving and parseing the json (urllib.encoder)

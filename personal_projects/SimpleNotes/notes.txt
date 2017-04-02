@@ -1,0 +1,30 @@
+## SIMPLE NOTES ##
+A simple notes app using tags
+## Project Idea by Saahil Khemnani ##
+
+- Basic notes app, either using vim or nano or emacs etc
+- Use tags like -n to make a new file/note
+                -a to add to a text file
+- Files are saved in .txt, .rtf, or any other format
+- Sync with Dropbox or any other cloud-based service
+- add quick notes inline using "-i"
+- support for \n, \t, etc (markdown?)
+
+## Example Implementation ##
+
+notes -n test.txt -i This is a test
+notes -a test.txt -i \n This is another test
+
+## NEW IMPLEMENTATION ##
+
+Make it a series of aliases and functions (workflow) centered around cat
+
+notes - pulls up the notes folder (Dropbox or local) and lses them
+note - cat > note.txt to the notes folder
+anote - cat note.txt && cat >> note.txt, appends to the note.txt
+qnote - echo "$1" >> note.txt, adds note inline to the note.txt
+rnote - cat /dev/null > note.txt, deletes all items in the note, resets is
+
+## Things to figure out
+
+* Deleting lines from a note

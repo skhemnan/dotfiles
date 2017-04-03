@@ -32,4 +32,4 @@ cask 'transmission'
 cask 'iterm2'
 cask 'flux'
 cask 'google-drive'
-
+cask 'music-manager'

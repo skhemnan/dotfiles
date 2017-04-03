@@ -28,6 +28,7 @@ alias prv="open -a 'Preview'"
 alias yt2mp3="youtube-dl -x --audio-format mp3"
 alias mvmusic="mv *.mp3 ~/Downloads/Music"
 alias dot="open 'https://github.com/skhemnan/dotfiles'"
+alias updatebash="cp .bash_profile ~/dotfiles/bash_profile"
 alias scdl="scdl -l"
 alias rmdi="rm -rf"
 alias rmdionly="rm -rf '$1'/*"
@@ -75,10 +76,10 @@ lnote(){
 }
 
 projects(){
-        cd ~/personal_projects && ls -1;
+        cd ~/.personal_projects && ls -1;
 }
 gotoproject(){
-        cd ~/personal_projects && cd "$1";
+        cd ~/.personal_projects && cd "$1";
 }
 mkcd(){
         mkdir -p "$1" && cd "$1";

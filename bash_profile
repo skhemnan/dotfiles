@@ -28,7 +28,6 @@ alias prv="open -a 'Preview'"
 alias yt2mp3="youtube-dl -x --audio-format mp3"
 alias mvmusic="mv *.mp3 ~/Downloads/Music"
 alias dot="open 'https://github.com/skhemnan/dotfiles'"
-alias updatebash="cp .bash_profile ~/dotfiles/bash_profile"
 alias scdl="scdl -l"
 alias rmdi="rm -rf"
 alias rmdionly="rm -rf '$1'/*"
@@ -62,6 +61,13 @@ alias chill="mpsyt pl 'https://www.youtube.com/watch?v=rpZjRl2YhMY&list=PLDfKAXS
 alias chillhop="mpsyt url 'https://www.youtube.com/watch?v=mx6t6E24SSM'"
 
 # Functions
+
+updatebash(){
+        cp .bash_profile ~/dotfiles/bash_profile
+        git add bash_profile
+        git commit -m "Automated update, added aliases/functions"
+        git push -f origin master
+}
 cdls(){
         cd "$1" && ls -a;
 }

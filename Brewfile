@@ -5,7 +5,6 @@ tap 'caskroom/versions'
 tap 'homebrew/bundle'
 
 brew 'caskroom/cask/brew-cask
-brew 'git'
 brew 'libpng'
 brew 'libtool'
 brew 'node'
@@ -33,4 +32,7 @@ cask 'transmission'
 cask 'iterm2'
 cask 'flux'
 cask 'google-drive'
+cask 'music-manager'
+cask 'spectacle'
+
 

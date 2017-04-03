@@ -64,6 +64,7 @@ alias chillhop="mpsyt url 'https://www.youtube.com/watch?v=mx6t6E24SSM'"
 
 updatebash(){
         cp .bash_profile ~/dotfiles/bash_profile
+        cd dotfiles
         git add bash_profile
         git commit -m "Automated update, added aliases/functions"
         git push -f origin master

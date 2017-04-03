@@ -33,6 +33,9 @@ cask 'iterm2'
 cask 'flux'
 cask 'google-drive'
 cask 'music-manager'
+<<<<<<< HEAD
 cask 'spectacle'
 
 
+=======
+>>>>>>> d8b6c17cb56b754530644e5630c6ec02fbc6e831

@@ -5,7 +5,6 @@ tap 'caskroom/versions'
 tap 'homebrew/bundle'
 
 brew 'caskroom/cask/brew-cask
-brew 'git'
 brew 'libpng'
 brew 'libtool'
 brew 'node'

@@ -39,7 +39,13 @@ alias ..="cd .."
 
 # Classes
 
-alias college="open ~/'Google Drive'/'College Notes'/'92 - Winter 2017'/"
+alias college="open ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/"
+alias 122a="open ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 122A'"
+alias 121="open ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 121'"
+alias 117="open ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 117'"
+alias 148="open ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 148'"
+alias 21a="open ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'PS 21A'"
+
 
 # TV Shows & Youtube Games
 
@@ -62,11 +68,42 @@ alias chillhop="mpsyt url 'https://www.youtube.com/watch?v=mx6t6E24SSM'"
 
 # Functions
 
+# Class functions
+
+122anote(){
+        cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 122A'
+        cd Notes && vim DBWeek$1.md
+}
+
+121note(){
+         cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 121'
+         cd Notes && vim IRWeek$1.md
+
+}
+
+148note(){
+       cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 148'
+       cd Notes && vim UCWeek$1.md
+
+}
+
+117note(){
+       cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 117'
+       cd Notes && vim SDWeek$1.md
+       
+}
+
+21anote(){
+        cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'PS 21A'
+        cd Notes && vim PSWeek$1.md
+
+}
+
 updatebash(){
         cp .bash_profile ~/dotfiles/bash_profile
         cd dotfiles
         git add bash_profile
-        git commit -m "Automated update, added aliases/functions"
+        git commit -m "Automated update: $1"
         git push -f origin master
 }
 cdls(){

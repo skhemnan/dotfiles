@@ -82,12 +82,6 @@ lnote(){
         cd ~/Documents && vim "$1.md"
 }
 
-projects(){
-        cd ~/.personal_projects && ls -1;
-}
-gotoproject(){
-        cd ~/.personal_projects && cd "$1";
-}
 mkcd(){
         mkdir -p "$1" && cd "$1";
 }

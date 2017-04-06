@@ -40,11 +40,11 @@ alias ..="cd .."
 # Classes
 
 alias college="open ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/"
-alias 122a="open ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 122A'"
-alias 121="open ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 121'"
-alias 117="open ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 117'"
-alias 148="open ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 148'"
-alias 21a="open ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'PS 21A'"
+alias 122a="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 122A'"
+alias 121="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 121'"
+alias 117="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 117'"
+alias 148="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 148'"
+alias 21a="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'PS 21A'"
 
 
 # TV Shows & Youtube Games

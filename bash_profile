@@ -18,7 +18,7 @@ alias wt="wunderline today"
 alias wall="wunderline all"
 alias imgur="open 'http://gigaahil.imgur.com/'"
 alias youtube='newsbeuter -r'
-alias pipp="mpv --ontop --no-border --autofit=307x173 --geometry=99%:2%"
+alias pipp="mpv --ontop --no-border --autofit=307x173 --geometry=99%:2% >/dev/null"
 alias g="googler"
 alias fnd="open -a 'Finder'"
 alias safari="open -a 'Safari'"
@@ -153,7 +153,7 @@ hindimovie(){
 }
 
 # Exports
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+export PS1="\[\033[33;1m\]\w\[\033[m\] > "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 

@@ -105,6 +105,7 @@ updatebash(){
         git add bash_profile
         git commit -m "Automated update: $1"
         git push -f origin master
+        cd ~
 }
 cdls(){
         cd "$1" && ls -a;

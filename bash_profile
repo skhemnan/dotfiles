@@ -28,7 +28,7 @@ alias prv="open -a 'Preview'"
 alias yt2mp3="youtube-dl -x --audio-format mp3"
 alias mvmusic="mv *.mp3 ~/Downloads/Music"
 alias dot="open 'https://github.com/skhemnan/dotfiles'"
-alias scdl="scdl -l"
+alias scdl="scdl -l && mvmusic"
 alias rmdi="rm -rf"
 alias rmdionly="rm -rf '$1'/*"
 alias cleanmusic="rm -rfv ~/Downloads/Music/* &> /dev/null"
@@ -41,10 +41,14 @@ alias ..="cd .."
 
 alias college="open ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/"
 alias 122a="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 122A'"
+alias 122asite="open 'https://grape.ics.uci.edu/wiki/asterix/wiki/cs122a-2017-spring'"
 alias 121="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 121'"
+alias 121site="open 'https://canvas.eee.uci.edu/courses/5075'"
 alias 117="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 117'"
+alias 117site="open 'https://eee.uci.edu/17s/36940'"
 alias 148="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 148'"
 alias 21a="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'PS 21A'"
+alias 21aaite="open 'https://canvas.eee.uci.edu/courses/5337'"
 
 
 # TV Shows & Youtube Games

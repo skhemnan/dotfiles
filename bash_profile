@@ -10,6 +10,7 @@ mv ~/*.mp3 ~/Downloads/Music &> /dev/null
 
 # Aliases
 alias md="open -a 'Macdown'"
+alias mdpdf="markdown-pdf"
 alias yt="mpsyt"
 alias wa="wunderline add"
 alias wd="wunderline done"
@@ -44,6 +45,7 @@ alias 122a="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 122A'"
 alias 122asite="open 'https://grape.ics.uci.edu/wiki/asterix/wiki/cs122a-2017-spring'"
 alias 121="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 121'"
 alias 121site="open 'https://canvas.eee.uci.edu/courses/5075'"
+alias 121pic="cd 'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 121'/Pictures/"
 alias 117="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 117'"
 alias 117site="open 'https://eee.uci.edu/17s/36940'"
 alias 148="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 148'"
@@ -63,6 +65,7 @@ alias dd="open 'https://solarmoviez.to/search/Daredevil.html'"
 alias lc="open 'https://solarmoviez.to/search/luke+cage.html'"
 alias jj="open 'https://solarmoviez.to/search/Jessica+Jones.html'"
 alias mr="movie 'mr+robot'"
+alias mon="open 'https://solarmoviez.to/movie/master-of-none-season-1-6313/74812-8/watching.html'"
 
 # Music - Playlists followed on Youtube, played on mpsyt
 alias tvg="mpsyt pl 'https://www.youtube.com/watch?v=9UXdk8D37gI&list=PLa2a9FJY91_3jSbtGMSq50PLSmUmzLH37'"
@@ -73,6 +76,11 @@ alias chillhop="mpsyt url 'https://www.youtube.com/watch?v=mx6t6E24SSM'"
 # Functions
 
 # Class functions
+
+addpic(){
+        mv ~/Desktop/*.png Pictures/$1.png
+        cdls Pictures
+}
 
 122anote(){
         cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 122A'

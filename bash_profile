@@ -12,8 +12,7 @@ mv ~/*.mp3 ~/Downloads/Music &> /dev/null
 alias md="open -a 'Macdown'"
 alias mdpdf="markdown-pdf"
 alias yt="mpsyt"
-alias wa="wunderline add"
-alias wd="wunderline done"
+alias wt="wunderline --today"
 alias wl="wunderline list"
 alias wt="wunderline today"
 alias wall="wunderline all"
@@ -103,12 +102,6 @@ addpic(){
        cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 117'
        cd Notes && vim SDWeek$1.md
        
-}
-
-21anote(){
-        cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'PS 21A'
-        cd Notes && vim PSWeek$1.md
-
 }
 
 updatebash(){

@@ -9,6 +9,7 @@ mv ~/*.mp3 ~/Downloads/Music &> /dev/null
 
 
 # Aliases
+alias python="python3"
 alias md="open -a 'Macdown'"
 alias mdpdf="markdown-pdf"
 alias yt="mpsyt"
@@ -146,6 +147,10 @@ mp3extract(){
 }
 
 # Search Functions
+
+goo(){
+        open "http://www.google.com/search?q=$1";
+}
 
 sc(){
         open "http://www.soundcloud.com/search?q= $1";

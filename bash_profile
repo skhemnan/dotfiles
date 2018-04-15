@@ -2,10 +2,12 @@
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin/python3:${PATH}"
 export PATH
+export BROWSER=/Applications/Google\ Chrome.app
 
 
 # Welcome Stuff
 mv ~/*.mp3 ~/Downloads/Music &> /dev/null
+
 
 
 # Aliases
@@ -38,29 +40,25 @@ alias ~="cd ~"
 alias ls='ls -a'
 alias ..="cd .."
 
-# Classes
+# Bitvore
 
-alias college="open ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/"
-alias 122a="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 122A'"
-alias 122asite="open 'https://grape.ics.uci.edu/wiki/asterix/wiki/cs122a-2017-spring'"
-alias 121="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 121'"
-alias 121site="open 'https://canvas.eee.uci.edu/courses/5075'"
-alias 121pic="cd 'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 121'/Pictures/"
-alias 117="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 117'"
-alias 117site="open 'https://eee.uci.edu/17s/36940'"
-alias 148="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 148'"
-alias 21a="cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'PS 21A'"
-alias 21aaite="open 'https://canvas.eee.uci.edu/courses/5337'"
+alias salesnav="open 'https://www.linkedin.com/sales?trk=d_flagship3_nav'"
+alias 100muni="open 'https://docs.google.com/spreadsheets/d/1rBQJN1EjO_dsIB7E_9YxKl2GkO-l7CMoTR3CKSU34GY/edit#gid=148650555'"
+alias norbert="open 'https://app.voilanorbert.com/#!/prospecting/manual'"
+alias zoho="open 'https://crm.zoho.com/crm/ShowTab.do?module=Leads'"
+alias mailtest="open 'http://www.mailtester.com'"
+alias prospect="open 'https://docs.google.com/spreadsheets/d/1zOPLx6Qr_rOs3e8CEPOLXv9ySbmxv5bJSx_BfZvaQBI/edit#gid=1325574501'"
 
 
 # TV Shows & Youtube Games
 
+alias famguy="open 'https://www.youtube.com/watch?v=DV0dT94Qf3w'"
 alias mafia3="mpsyt open Mafia3"
 alias bbt="open 'https://solarmoviez.to/movie/the-big-bang-theory-season-10-16447/490365-8/watching.html'"
 alias himym="open 'https://solarmoviez.to/search/How+I+met+your+mother.html'"
 alias pnr="open 'https://solarmoviez.to/search/Parks+and+recreation.html'"
 alias manseegi="open 'http://123movies.net/movie/search/Man+Seeking+Woman'"
-alias friends="open 'https://solarmoviez.to/search/friends/page-2.html'"
+alias friends="open 'https://solarmoviez.to/movie/friends-season-6-2633/484835-8/watching.html'"
 alias dd="open 'https://solarmoviez.to/search/Daredevil.html'"
 alias lc="open 'https://solarmoviez.to/search/luke+cage.html'"
 alias jj="open 'https://solarmoviez.to/search/Jessica+Jones.html'"
@@ -80,29 +78,6 @@ alias chillhop="mpsyt url 'https://www.youtube.com/watch?v=mx6t6E24SSM'"
 addpic(){
         mv ~/Desktop/*.png Pictures/$1.png
         cdls Pictures
-}
-
-122anote(){
-        cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 122A'
-        cd Notes && vim DBWeek$1.md
-}
-
-121note(){
-         cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'CS 121'
-         cd Notes && vim IRWeek$1.md
-
-}
-
-148note(){
-       cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 148'
-       cd Notes && vim UCWeek$1.md
-
-}
-
-117note(){
-       cd ~/'Google Drive'/'College Notes'/'93 - Spring 2017'/'INF 117'
-       cd Notes && vim SDWeek$1.md
-       
 }
 
 updatebash(){
@@ -156,7 +131,7 @@ sc(){
         open "http://www.soundcloud.com/search?q= $1";
 }
 movie(){
-        open "http://solarmoviez.to/search/$1.html";
+        open "https://gomovies.sc/search-query/$1/";
 }
 
 hindimovie(){

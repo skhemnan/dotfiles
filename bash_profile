@@ -40,32 +40,14 @@ alias ~="cd ~"
 alias ls='ls -a'
 alias ..="cd .."
 
-# Bitvore
 
-alias salesnav="open 'https://www.linkedin.com/sales?trk=d_flagship3_nav'"
-alias 100muni="open 'https://docs.google.com/spreadsheets/d/1rBQJN1EjO_dsIB7E_9YxKl2GkO-l7CMoTR3CKSU34GY/edit#gid=148650555'"
-alias norbert="open 'https://app.voilanorbert.com/#!/prospecting/manual'"
-alias zoho="open 'https://crm.zoho.com/crm/ShowTab.do?module=Leads'"
-alias mailtest="open 'http://www.mailtester.com'"
-alias prospect="open 'https://docs.google.com/spreadsheets/d/1zOPLx6Qr_rOs3e8CEPOLXv9ySbmxv5bJSx_BfZvaQBI/edit#gid=1325574501'"
-
-
-# TV Shows & Youtube Games
+# Youtube Streams
 
 alias famguy="open 'https://www.youtube.com/watch?v=DV0dT94Qf3w'"
 alias mafia3="mpsyt open Mafia3"
-alias bbt="open 'https://solarmoviez.to/movie/the-big-bang-theory-season-10-16447/490365-8/watching.html'"
-alias himym="open 'https://solarmoviez.to/search/How+I+met+your+mother.html'"
-alias pnr="open 'https://solarmoviez.to/search/Parks+and+recreation.html'"
-alias manseegi="open 'http://123movies.net/movie/search/Man+Seeking+Woman'"
-alias friends="open 'https://solarmoviez.to/movie/friends-season-6-2633/484835-8/watching.html'"
-alias dd="open 'https://solarmoviez.to/search/Daredevil.html'"
-alias lc="open 'https://solarmoviez.to/search/luke+cage.html'"
-alias jj="open 'https://solarmoviez.to/search/Jessica+Jones.html'"
-alias mr="movie 'mr+robot'"
-alias mon="open 'https://solarmoviez.to/movie/master-of-none-season-1-6313/74812-8/watching.html'"
 
 # Music - Playlists followed on Youtube, played on mpsyt
+
 alias tvg="mpsyt pl 'https://www.youtube.com/watch?v=9UXdk8D37gI&list=PLa2a9FJY91_3jSbtGMSq50PLSmUmzLH37'"
 alias hiphop="mpsyt pl 'https://www.youtube.com/playlist?list=PL9RiXq3CWn9rzkV9GPASvnCfWMpugiFpN'"
 alias chill="mpsyt pl 'https://www.youtube.com/watch?v=rpZjRl2YhMY&list=PLDfKAXSi6kUZczwycO8UcABjn-w3WJ_71'"
@@ -130,13 +112,7 @@ goo(){
 sc(){
         open "http://www.soundcloud.com/search?q= $1";
 }
-movie(){
-        open "https://gomovies.sc/search-query/$1/";
-}
 
-hindimovie(){
-        open "https://www.hindilinks4u.to/?s=$1";
-}
 
 # Exports
 export PS1="\[\033[33;1m\]\w\[\033[m\] > "

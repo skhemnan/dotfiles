@@ -14,7 +14,7 @@ set noswapfile			" Turns off swap files when you've edited the same file in 2 in
 
 inoremap jk <Esc>		" This remaps Escape for easier access in insert mode
 nnoremap <BS> x			" This remaps backspace to x for easier backspace in normal mode
-vmap <C-c> :w !pbcopy " macOS only: sets system clipboard copy to ctrl+c
+vmap <C-c> :w !pbcopy
 
 "" HTML Remaps (for autocomplete/more efficient programming)
 

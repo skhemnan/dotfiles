@@ -44,5 +44,5 @@ gupdate(){
 }
 
 aupdate() {
-				cp ~/.aliases ~/macdotfiles/aliases;
+				cp ~/.aliases ~/dotfiles/aliases;
 }

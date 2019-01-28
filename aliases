@@ -1,5 +1,3 @@
-
-
 #macOS specific aliases
 
 alias fnd="open -a 'Finder'"
@@ -19,6 +17,7 @@ alias vimrc="cd ~ && vim .vimrc"
 alias oalias="cd ~ && vim .aliases"
 alias youtube="newsboat -r"
 alias ghrepos="open 'https://github.com/skhemnan?tab=repositories'"
+alias gpm="git pull origin master"
 
 # Functions
 

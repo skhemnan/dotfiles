@@ -1,5 +1,3 @@
-
-
 #macOS specific aliases
 
 alias fnd="open -a 'Finder'"
@@ -19,10 +17,15 @@ alias pipp="mpv --ontop --no-border --autofit=307x173 --geometry=2%:99% >/dev/nu
 alias vimrc="cd ~ && vim .vimrc"
 alias oalias="cd ~ && vim .aliases"
 alias youtube="newsboat -r"
+<<<<<<< HEAD
 alias ghrepos="google-chrome 'https://github.com/skhemnan?tab=repositories'>/dev/null"
 alias i3config='cd ~/.config/i3 && vi config'
 alias aptg='sudo apt-get install'
 
+=======
+alias ghrepos="open 'https://github.com/skhemnan?tab=repositories'"
+alias gpm="git pull origin master"
+>>>>>>> e9f3f105c67bb3a8bcdd0d330e6f02d716bd945d
 
 # Functions
 

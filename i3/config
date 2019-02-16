@@ -31,7 +31,7 @@ font pango:System San Francisco Display 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec gnome-terminal
 bindsym $mod+C exec google-chrome
 
 # kill focused window
@@ -166,18 +166,18 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color 	         #303642
-set $inactive-bg-color   #414A59
-set $text-color          #F5F6F7
+set $bg-color 	         #232323
+set $inactive-bg-color   #2e2e2e
+set $text-color          #bb4f32
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #CC575D
 set $border-color				 #5294e2
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #414A59
-client.unfocused        $border-color       $inactive-bg-color $inactive-text-color #414A59
-client.focused_inactive $border-color       $inactive-bg-color $inactive-text-color #414A59
+client.focused          $inactive-bg-color	$inactive-bg-color $text-color          #414A59
+client.unfocused        $bg-color		        $bg-color					 $inactive-text-color #414A59
+client.focused_inactive $bg-color           $inactive-bg-color $inactive-text-color #414A59
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #414A59
 
 

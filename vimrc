@@ -9,26 +9,14 @@ set softtabstop=2		" This changes the tab to 2 spaces
 set number					" Turns on line numbers
 :syntax on					" Turns on syntax highlighting. very important!
 set noswapfile			" Turns off swap files when you've edited the same file in 2 instances
+set wrap
+set linebreak
 
 " Remaps (Insert and Normal)
 
 inoremap jk <Esc>		" This remaps Escape for easier access in insert mode
 nnoremap <BS> x			" This remaps backspace to x for easier backspace in normal mode
 vmap <C-c> :w !pbcopy
-
-"" HTML Remaps (for autocomplete/more efficient programming)
-
-inoremap div. <div></div>
-inoremap h1. <h1></h1>
-inoremap h1.style <h1 style=""></h1>
-inoremap h2. <h2></h2>
-inoremap h2.style <h2 style=""></h2>
-inoremap h3. <h3></h3>
-inoremap h3.style <h3 style=""></h3>
-inoremap h4. <h4></h4>
-inoremap h4.style <h4 style=""></h4>
-inoremap p. <p>
-inoremap href. <a href=""></a>
 
 let &t_SI = "\e[6 q"			" This set of commands change cursor look between insert and normal mode
 let &t_EI = "\e[2 q"

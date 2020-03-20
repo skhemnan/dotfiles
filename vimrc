@@ -3,6 +3,14 @@
 " nnoremap binds keys in normal mode
 " inoremap binds keys in insert mode
 
+" Call for plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'sheerun/vim-polyglot'
+Plug 'mattn/emmet-vim'
+
+call plug#end()
+
 
 set tabstop=2				" This changes the tab to 2 spaces
 set softtabstop=2		" This changes the tab to 2 spaces

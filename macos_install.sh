@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 echo OS X New Install Script
 read -p "Press any key to continue..." -n1 -s
 echo '\n'
@@ -14,16 +14,10 @@ brew bundle
 brew cleanup
 brew update
 
-# Install npm apps
-
-npm install medium-cli
-npm install wunderline
-
 # Install pip apps
 
 pip3 install mps-youtube
 pip3 install youtube-dl
-pip install rtv
 
 
 

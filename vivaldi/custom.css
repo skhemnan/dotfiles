@@ -1,0 +1,15 @@
+
+/* Hides Title Bar */
+#header{
+	display: none !important
+}
+
+/* Removes Trash can and cloud from tab bar */
+.toolbar-tabbar.sync-and-trash-container{
+	display: none !important
+}
+
+/* Removes plus button in tab bar */
+.button-toolbar.newtab {
+	display: none
+}

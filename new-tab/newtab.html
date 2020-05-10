@@ -6,21 +6,26 @@
 								<meta name='viewport' content='width=device-width, initial-scale=1'>
 								<title>tab</title>
 								<link rel="icon" type="image/png" href="https://i.ya-webdesign.com/images/black-dot-png-15.png">
+								<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 				</head>
 				<style>
 						body{
 							width:100%;
+							height:100vh;
+							font-family:"Arial";
+							margin:0;
+						}
+						.main{
+							width:100%;
 							height:100%;
-							background-color:#222222;
-							font-family:"monaco"
 						}
 						.container{
 							display:flex;
 							flex-direction:column;
 							justify-content:center;
 							align-items:center;
-							width:100vw;
-							height:100vh
+							width:100%;
+							height:96%;
 						}						
 						a{
 							text-decoration:none;
@@ -28,17 +33,88 @@
 							font-size:15px;
 							padding:3px;
 						}
+						h1{
+							font-size:80px;
+							color:#7d7d7d;
+							font-family:"Orbitron"
+						}
 						p{
-							font-size:25px;
+							font-size:15px;
+							color:#5e5e5e;
+							cursor:pointer;
+							margin-left:5px;
+						}
+						p:hover{
 							color:#d8d8d8
 						}
+						.footer{
+							position:absolute;
+							bottom:0;
+							margin-left:20px;
+							display:flex;
+							flex-direction:flex-start;
+						}
+						#color{
+							background:transparent;
+							font-size: 15px;
+							border:solid 1px #d8d8d8;
+							border-radius:4px;
+							width:50%;
+							color:#d8d8d8;
+							padding:5px;
+						}
+						#color-form{
+							display:none;
+							width:100%;
+							margin:5px;
+							margin-bottom:10px;
+							margin-left:0;
+						}
 				</style>
-				<body>
-					<div class="container">
-							<p>{  }</p>
-							<a href="https://www.youtube.com">youtube</a>
-							<a href="https://www.reddit.com">reddit</a>
-							<a href="https://web.whatsapp.com">whatsapp</a>
-					</div>		
+				<body style="background-color:rgb(34,34,34)">
+					<div class="main">
+						<div class="container">
+								<h1 id="time"></h1>
+						</div>
+						<div class="footer">
+								<p id="bg-color">#</p>
+								<form id="color-form">
+									<input id="color" type="text" value="#">
+								</form>
+						</div>
+					</div>
+					<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+					<script>
+						function getTime(){
+						var d = new Date();
+						var time = ("0"+ d.getHours()).slice(-2)+":"+("0"+d.getMinutes()).slice(-2);
+						document.getElementById("time").innerHTML = time;
+						}
+						function getColor(){
+										if(localStorage.getItem("color")===null){
+											localStorage.setItem("color","#222222");
+										}
+										var color = localStorage.getItem("color");
+										$("body").css("background-color",`${color}`)
+								}
+						function changeColor(){
+								$("#bg-color").click(event=>{
+								$("#bg-color").hide();
+								$("#color-form").show();
+								$("#color-form").submit(function(event){
+										event.preventDefault();
+										var col = $("#color").val();
+										localStorage.setItem("color",`${col}`)
+										$("body").css("background-color",`${col}`)
+										$("#color-form").hide();
+										$("#bg-color").show();
+										event.target.reset();
+								});
+							});
+						}
+						getTime();
+						changeColor();
+						getColor();
+					</script>
 				</body>
 </html>

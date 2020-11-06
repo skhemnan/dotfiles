@@ -37,3 +37,25 @@ const $1 = () => {
 	$2
 }
 endsnippet
+
+snippet expboiler
+const express = require("express");
+const app = express();
+
+//middleware
+app.use($1);
+
+//ROUTES//
+
+app.listen(5000, () => {
+	console.log("listening on port 5000")
+});
+endsnippet
+
+snippet trycatch
+try {
+  $1
+} catch(err) {
+  console.err(err.message);
+}
+endsnippet

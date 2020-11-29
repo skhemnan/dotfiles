@@ -12,12 +12,26 @@ Plug 'SirVer/ultisnips'
 Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'prettier/vim-prettier'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf'
+Plug 'ayu-theme/ayu-vim'
+
 
 
 call plug#end()
 
+" This is only necessary if you use set termguicolors.
+ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+" fixes glitch? in colors when using vim with tmux
+ set background=dark
+ set t_Co=256
+
 
 set tabstop=2				" This changes the tab to 2 spaces
+set termguicolors
 set softtabstop=2		" This changes the tab to 2 spaces
 set number					" Turns on line numbers
 :syntax on					" Turns on syntax highlighting. very important!
@@ -28,12 +42,23 @@ set backspace=indent,eol,start " Sets backspace to work on insert mode
 set number relativenumber
 set splitbelow splitright
 let g:airline_theme='codedark'
+let ayucolor="dark"
+
+vnoremap <C-c> "*y
 
 " Remaps (Insert and Normal)
+" This remaps Escape for easier access in insert mode
+inoremap jk <Esc>		
 
-inoremap jk <Esc>		" This remaps Escape for easier access in insert mode
-nnoremap <BS> x			" This remaps backspace to x for easier backspace in normal mode
-vmap <C-c> :w !pbcopy " This remaps ctrl+C to pbcopy (universal clipboard)
+" This remaps backspace to x for easier backspace in normal mode
+nnoremap <BS> x			
+
+" This remaps ctrl+C to pbcopy (universal clipboard)
+" vmap <C-c> :w !pbcopy 
+
+" Resizeing panes
+noremap <C-P> :vertical resize +5
+noremap <C-O> :vertical resize -5
 
 " Tab navigation
 noremap <C-p> gt 
@@ -45,7 +70,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-noremap <C-T> :tabnew<CR> 
+noremap <C-T> :tabnew .<CR> 
 nnoremap <C-E> :term<CR> 
 nnoremap <C-Q> :q!<CR>
 nnoremap <C-W> :w<CR>
@@ -56,7 +81,7 @@ let &t_EI = "\e[2 q"
 
 let g:user_emmet_leader_key = '<C-s>'
 
-:colorscheme codedark " This sets the colorscheme
+:colorscheme ayu " This sets the colorscheme
 
 autocmd BufNewFile *.html ks|call HTMLHeader()|'y		" This will apped the HTMLHeader function to any new html file
 

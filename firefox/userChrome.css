@@ -1,24 +1,93 @@
-/* no navbar and title bar
+/* // NO NAV BAR AND TITLE BAR // */
  
-#navigator-toolbox {
+#nav-bar {
 	position: relative;
 	z-index: 1;
-	max-height: 7px;
+	max-height: 0.5px;
 	margin-top: 0px;
 	opacity: 0;
 	overflow: hidden;
 }
 
-#navigator-toolbox:hover,
-#navigator-toolbox:focus-within {
-	max-height: 100px; /* must be somewhat larger than actual bar height *
+#nav-bar:focus-within {
+	max-height: 100px; /* must be somewhat larger than actual bar height */
 	opacity: 1;
 	overflow: inherit;
 }
 
-*/
 
-/* Remove title bar buttons */
+:root {
+  --tab-min-height: 2rem !important;
+}
+
+toolbar {
+  appearance: auto;
+  -moz-default-appearance: toolbar;
+  min-width: 1px;
+  min-height: 1px !important;
+}
+
+.tab-label-container {
+  height: var(--tab-min-height);
+}
+
+.tab-label {
+  line-height: var(--tab-min-height) !important;
+}
+
+.tab-icon-image {
+  margin-top: 2px !important;
+}
+
+.tab-icon-image,
+.tab-icon-sound,
+.tab-close-button {
+  height: 1em !important;
+  width: 1em !important;
+}
+
+.tabbrowser-tab:first-child{ counter-reset: nth-tab 0 } /* Change to -1 for 0-indexing */
+.tabbrowser-tab[fadein]{ max-width: 100vw !important }
+.tab-text::before{ content: counter(nth-tab) ": "; counter-increment: nth-tab }
+
+/* Close, minizime and maximize window buttons */
+.titlebar-buttonbox-container { display: none; }
+
+/* Empty space before and after the tab bar */
+.titlebar-spacer { display: none; }
+
+/* New tab button */
+#tabs-newtab-button { display: none; }
+
+/* Scroll left button when the tabs overflow the tab bar */
+#scrollbutton-up { display: none; }
+
+/* Scroll right button when the tabs overflow the tab bar */
+#scrollbutton-down { display: none; }
+
+/* New tab button when the tabs overflow the tab bar */
+#new-tab-button { display: none; }
+
+/* List all tabs button when the tabs overflow the tab bar */
+#alltabs-button { display: none; }
+
+/* Private window icon at the end of the tab bar */
+.private-browsing-indicator { display: none; }
+
+.tabbrowser-tab .tab-close-button{
+  display:none;
+}
+.tabbrowser-tab:not([pinned]):hover .tab-close-button{
+  display:-moz-box !important;
+}
+
+.tab-line {
+  height: 0px;
+}
+
+/* ONE LINER */
+
+/* Remove title bar buttons
 
 .titlebar-buttonbox-container {
 	display: none;
@@ -28,7 +97,7 @@
 	display: none;
 }
 
-/* Tab bar */
+/* Tab bar 
 #navigator-toolbox {
 	border: 0px !important;
 }
@@ -62,7 +131,7 @@
 	--toolbox-border-bottom-color: transparent !important;
 }
 
-/* Nav bar*/
+/* Nav bar 
 #nav-bar {
 	background: transparent !important;
 	margin-top: -32px !important;
@@ -71,7 +140,7 @@
 	height: 32px !important;
 }
 
-/* URL bar */
+/* URL bar 
 #urlbar-container {
 	min-width: 100px !important;
 }
@@ -86,7 +155,7 @@
 	display: none !important;
 }
 
-/* Tab bar */
+/* Tab bar 
 #navigator-toolbox {
 	border: 0px !important;
 }
@@ -120,7 +189,7 @@
 	--toolbox-border-bottom-color: transparent !important;
 }
 
-/* Nav bar*/
+/* Nav bar 
 #nav-bar {
 	background: transparent !important;
 	margin-top: -32px !important;
@@ -129,7 +198,7 @@
 	height: 32px !important;
 }
 
-/* URL bar */
+/* URL bar 
 #urlbar-container {
 	min-width: 100px !important;
 }
@@ -163,3 +232,4 @@
 .urlbarView-row {
 	padding: 0px !important;
 }
+

@@ -8,7 +8,7 @@ alias fnd="open -a 'Finder'"
 alias ..="cd .."
 alias ~="cd ~"
 alias pipp="mpv --ontop --no-border --autofit=307x173 --geometry=2%:99%"
-alias ls="ls -a --color"
+alias ls="ls -a"
 alias bprof="cd ~ && vim .bash_profile"
 alias sbrc="cd ~ && source .aliases && source .bashrc"
 alias sprof="source .bash_profile"
@@ -29,15 +29,23 @@ alias vimo="vim -O"
 alias viminstall="vim +'PlugInstall' +qa"
 alias ggstaging="psql -h staging.chtjmojvrof0.ap-southeast-1.rds.amazonaws.com -d gajigesa -U postgres"
 alias openapistaging="psql -h openapi-staging.chtjmojvrof0.ap-southeast-1.rds.amazonaws.com -U postgres -d postgres"
+alias gcdelay="gcd delay-activate createDelayTask"
+alias code="open -a '/Applications/Visual Studio Code.app'"
+
 
 # Functions
+
+gcd(){
+	gcloud functions deploy $1 --trigger-http --region asia-southeast2 --runtime nodejs10 --entry-point $2
+}
 
 transparent(){
   magick convert "$1" -fuzz 3% -transparent '#ffffff' "$1"
 }
 
 downloadfile(){
-	ffmpeg -i "$1" -c copy -bsf:a aac_adtstoasc "$2.mp4"
+	ffmpeg -i "$1" -c copy -bsf:a aac_adtstoasc "$2.mp4";
+	mv "$2.mp4" ~/Downloads/Movies
 }
 
 notes(){

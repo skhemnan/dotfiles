@@ -13,6 +13,7 @@ alias bprof="cd ~ && vim .bash_profile"
 alias sbrc="cd ~ && source .aliases && source .bashrc"
 alias sprof="source .bash_profile"
 alias lofi="mpv --no-video https://www.youtube.com/watch?v=5qap5aO4i9A"
+alias oldies="mpv --ontop --no-border --autofit=307x173 --geometry=2%:99% >/dev/null https://www.youtube.com/watch?v=2JJi-NhExzs"
 alias pipp="mpv --ontop --no-border --autofit=307x173 --geometry=2%:99% >/dev/null"
 alias mpvbest="mpv --ytdl-format='bestvideo[width<=1920][height<=1080]+bestaudio'"
 alias vimrc="cd ~ && vim .vimrc"
@@ -31,6 +32,9 @@ alias ggstaging="psql -h staging.chtjmojvrof0.ap-southeast-1.rds.amazonaws.com -
 alias openapistaging="psql -h openapi-staging.chtjmojvrof0.ap-southeast-1.rds.amazonaws.com -U postgres -d postgres"
 alias gcdelay="gcd delay-activate createDelayTask"
 alias code="open -a '/Applications/Visual Studio Code.app'"
+alias himym="cd ~/Downloads/HIMYM/S9/ && pipp ."
+alias downloadDir="wget -r -np -nH"
+alias ytwl="yt-dlp -u saahil.khemlani@gmail.com -p Bitvore55! --cookies cookies.txt -j --flat-playlist "https://www.youtube.com/playlist?list=WL" | jq -r '.url' > result.txt && pipp --playlist=result.txt"
 
 
 # Functions

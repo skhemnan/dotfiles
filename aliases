@@ -1,83 +1,64 @@
-#macOS specific aliases
+##### WORK ########################################################################################
 
-alias fnd="open -a 'Finder'"
-
-
-# Aliases
-
-alias ..="cd .."
-alias ~="cd ~"
-alias pipp="mpv --ontop --no-border --autofit=307x173 --geometry=2%:99%"
-alias ls="ls -a"
-alias bprof="cd ~ && vim .bash_profile"
-alias sbrc="cd ~ && source .aliases && source .bashrc"
-alias sprof="source .bash_profile"
-alias lofi="mpv --no-video https://www.youtube.com/watch?v=5qap5aO4i9A"
-alias oldies="mpv --ontop --no-border --autofit=307x173 --geometry=2%:99% >/dev/null https://www.youtube.com/watch?v=2JJi-NhExzs"
-alias pipp="mpv --ontop --no-border --autofit=307x173 --geometry=2%:99% >/dev/null"
-alias mpvbest="mpv --ytdl-format='bestvideo[width<=1920][height<=1080]+bestaudio'"
-alias vimrc="cd ~ && vim .vimrc"
-alias oalias="cd ~ && vim .aliases"
-alias youtube="newsboat -r"
-alias wl="open 'https://www.youtube.com/playlist?list=WL'"
-alias ghrepos="google-chrome 'https://github.com/skhemnan?tab=repositories'>/dev/null"
-alias i3config='cd ~/.config/i3 && vi config'
-alias aptg='sudo apt-get install'
-alias ghrepos="open 'https://github.com/skhemnan?tab=repositories'"
-alias gpm="git pull origin master"
-alias vimp="vim -p"
-alias vimo="vim -O"
-alias viminstall="vim +'PlugInstall' +qa"
-alias ggstaging="psql -h staging.chtjmojvrof0.ap-southeast-1.rds.amazonaws.com -d gajigesa -U postgres"
-alias openapistaging="psql -h openapi-staging.chtjmojvrof0.ap-southeast-1.rds.amazonaws.com -U postgres -d postgres"
-alias gcdelay="gcd delay-activate createDelayTask"
-alias code="open -a '/Applications/Visual Studio Code.app'"
-alias himym="cd ~/Downloads/HIMYM/S9/ && pipp ."
-alias downloadDir="wget -r -np -nH"
-alias ytwl="yt-dlp -u saahil.khemlani@gmail.com -p Bitvore55! --cookies cookies.txt -j --flat-playlist "https://www.youtube.com/playlist?list=WL" | jq -r '.url' > result.txt && pipp --playlist=result.txt"
-
-
-# Functions
-
-gcd(){
-	gcloud functions deploy $1 --trigger-http --region asia-southeast2 --runtime nodejs10 --entry-point $2
-}
-
-transparent(){
-  magick convert "$1" -fuzz 3% -transparent '#ffffff' "$1"
-}
-
-downloadfile(){
-	ffmpeg -i "$1" -c copy -bsf:a aac_adtstoasc "$2.mp4" && mv "$2.mp4" ~/Downloads/Movies
-}
-
-notes(){
-        cd ~/Dropbox/Notes && ls -1;
-}
-
-cdls(){
-	cd "$1" && ls -a;
-}
-
-mkcd(){
-	mkdir "$1" && cd "$1";
-}
-
-note(){
-        cd ~/Dropbox/Notes && vim "$1.md"
-}
-mp3extract(){
-        ffmpeg -i "$1" -acodec libmp3lame "$2".mp3
-}
-
+# Github
+alias gp="git pull"
+alias gpo="git push origin"
 gupdate(){
 				git add *
 				git commit -m "$1"
-				git push origin master;
+				git push origin "$2";
 }
 
+# Directory Manipulation
+cdls(){ cd "$1" && ls -a; }
+mkcd(){ mkdir "$1" && cd "$1"; }
+alias ..="cd .."
+alias ~="cd ~"
+alias ls="ls -a"
+alias fnd="open -a 'Finder'"
+
+
+# Dotfiles
+alias bprof="cd ~ && vim .bash_profile"
+alias sbrc="cd ~ && source .aliases && source .bashrc"
+alias sprof="source .bash_profile"
+alias vimrc="cd ~ && vim .vimrc"
+alias oalias="cd ~ && vim .aliases"
 aupdate() {
 				cp ~/.aliases ~/dotfiles/aliases;
 				cd ~/dotfiles
 				gupdate aliases "Automated update, added some new ones";
 }
+
+# Vim
+alias vimp="vim -p"
+alias vimo="vim -O"
+alias viminstall="vim +'PlugInstall' +qa"
+
+# GG
+alias ggstaging="psql -h staging.chtjmojvrof0.ap-southeast-1.rds.amazonaws.com -d gajigesa -U postgres"
+alias openapistaging="psql -h openapi-staging.chtjmojvrof0.ap-southeast-1.rds.amazonaws.com -U postgres -d postgres"
+alias gcdelay="gcd delay-activate createDelayTask"
+gcd(){ gcloud functions deploy "$1" --trigger-http --region asia-southeast2 --runtime nodejs10 --entry-point "$2"; }
+
+# VSCode
+alias code="open -a '/Applications/Visual Studio Code.app'"
+
+# React Native
+alias rns="npx react-native start"
+alias rna="npx react-native run-android"
+
+##### PLAY ########################################################################################
+
+# Media Downloading
+alias downloadDir="wget -r -np -nH"
+alias ytwl="yt-dlp -u saahil.khemlani@gmail.com -p Bitvore55! --cookies cookies.txt -j --flat-playlist "https://www.youtube.com/playlist?list=WL" | jq -r '.url' > result.txt && pipp --playlist=result.txt"
+downloadfile(){ ffmpeg -i "$1" -c copy -bsf:a aac_adtstoasc "$2.mp4"; }
+
+# Media Playback
+alias pipp="mpv --ontop --no-border --autofit=307x173 --geometry=2%:99% >/dev/null"
+alias mpvbest="mpv --ytdl-format='bestvideo[width<=1920][height<=1080]+bestaudio'"
+
+# Media Manipulation
+transparent(){ magick convert "$1" -fuzz 3% -transparent '#ffffff' "$1"; }
+mp3extract(){ ffmpeg -i "$1" -acodec libmp3lame "$2".mp3; }

@@ -14,12 +14,6 @@ brew bundle
 brew cleanup
 brew update
 
-# Install pip apps
-
-pip3 install mps-youtube
-pip3 install youtube-dl
-
-
 
 
 

@@ -14,7 +14,7 @@ cdls(){ cd "$1" && ls -a; }
 mkcd(){ mkdir "$1" && cd "$1"; }
 alias ..="cd .."
 alias ~="cd ~"
-alias ls="ls -a"
+alias ls="ls -a -1"
 alias fnd="open -a 'Finder'"
 
 
@@ -42,7 +42,7 @@ alias gcdelay="gcd delay-activate createDelayTask"
 gcd(){ gcloud functions deploy "$1" --trigger-http --region asia-southeast2 --runtime nodejs10 --entry-point "$2"; }
 
 # VSCode
-alias code="open -a '/Applications/Visual Studio Code.app'"
+# alias code="open -a '/Applications/Visual Studio Code.app'"
 
 # React Native
 alias rns="npx react-native start"

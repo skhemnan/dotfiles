@@ -4,30 +4,6 @@
 " inoremap binds keys in insert mode
 
 " Call for plugins
-call plug#begin('~/.vim/plugged')
-
-Plug 'sheerun/vim-polyglot'
-Plug 'mattn/emmet-vim'
-Plug 'SirVer/ultisnips'
-Plug 'tomasiser/vim-code-dark'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'prettier/vim-prettier'
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf'
-Plug 'ayu-theme/ayu-vim'
-
-
-
-call plug#end()
-
-" This is only necessary if you use set termguicolors.
- let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
- let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
-" fixes glitch? in colors when using vim with tmux
- set background=dark
- set t_Co=256
 
 
 set tabstop=2				" This changes the tab to 2 spaces

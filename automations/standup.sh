@@ -26,6 +26,11 @@ YESTERDAY_TASKS=$(echo "$TASKS_JSON" | jq -r --argjson ids "$TASK_IDS" '
 TODAY_TASKS=$(echo "$TASKS_JSON" | jq -r '
   .tasks[] | select(.status.status == "working on") | .name')
 
+# If no "working on" tasks are found, add filler items
+if [ ${#TODAY_TASKS[@]} -eq 0 ]; then
+  TODAY_TASKS=("• PR Review" "• Bug Fixes")
+fi
+
 # Print formatted output
 echo "$YESTERDAY"
 echo "$YESTERDAY_TASKS" | sed 's/^/• /'
